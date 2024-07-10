@@ -17,11 +17,30 @@ def fetch_applicant_data():
     return pd.DataFrame([applicant_data])
 
 def main():
+    ascii_art="""
+        _                           
+       | |    ___   __ _ _ __       
+       | |   / _ \ / _` | '_ \      
+       | |__| (_) | (_| | | | |     
+       |_____\___/ \__,_|_| |_|  _ 
+       / ___|_   _  __ _ _ __ __| |
+      | |  _| | | |/ _` | '__/ _` |
+      | |_| | |_| | (_| | | | (_| |
+       \____|\__,_|\__,_|_|  \__,_|
+              ......              ..&&..
+         ....................   ..&&&.. 
+ .####...&&&&&&&&&&&&&&&&&&&...&&&&..   
+ .####.&&&&&&&&&&&&&&&&&&&&&&&&&..      
+ .####.&&&&&&&&&&&&&&&&&&&&&&&..        
+ .####.&&....................           
+ .####..
+ """
+    print(ascii_art)
     parser = argparse.ArgumentParser(description='Credit Risk Analysis Tool')
-    parser.add_argument('--generate', '-g', action='store_true', help='Generate new data and process it')
-    parser.add_argument('--train', '-t', action='store_true', help='Train the model')
-    parser.add_argument('--plot', '-p', action='store_true', help='Visualize the data')
-    parser.add_argument('--fetch', '-f', action='store_true', help='Fetch and score a new applicant')
+    parser.add_argument('-g', '--generate', action='store_true', help='Generate new data and process it')
+    parser.add_argument('-t', '--train', action='store_true', help='Train the model')
+    parser.add_argument('-p', '--plot', action='store_true', help='Visualize the data')
+    parser.add_argument('-f', '--fetch', action='store_true', help='Fetch and score a new applicant')
 
     args = parser.parse_args()
 
