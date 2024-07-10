@@ -3,3 +3,4 @@ faker
 scikit-learn
 matplotlib
 seaborn
+colorama
