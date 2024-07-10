@@ -4,6 +4,7 @@ from data.generate_data import generate_data
 from data.preprocess_data import load_and_preprocess_data
 from model.train_model import train_and_evaluate_model
 from visualization.visualize_data import visualize_risk_scores
+from colorama import init, Fore, Style
 
 def fetch_applicant_data():
     # Simulating an API call
@@ -17,7 +18,8 @@ def fetch_applicant_data():
     return pd.DataFrame([applicant_data])
 
 def main():
-    ascii_art="""
+    init()
+    ascii_art=r"""
         _                           
        | |    ___   __ _ _ __       
        | |   / _ \ / _` | '_ \      
@@ -35,7 +37,7 @@ def main():
  .####.&&....................           
  .####..
  """
-    print(ascii_art)
+    print(Fore.GREEN + ascii_art + Style.RESET_ALL)
     parser = argparse.ArgumentParser(description='Credit Risk Analysis Tool')
     parser.add_argument('-g', '--generate', action='store_true', help='Generate new data and process it')
     parser.add_argument('-t', '--train', action='store_true', help='Train the model')
