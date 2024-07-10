@@ -94,7 +94,7 @@ def main():
         model, _, _ = train_and_evaluate_model(X_train, X_test, y_train, y_test)
         new_applicant_scaled = scaler.transform(new_applicant)
         new_applicant_risk_score = model.predict_proba(new_applicant_scaled)[:, 1]
-        print(f'Risk score for new applicant: {new_applicant_risk_score[0]}')
+        print(f'Risk score for new applicant: {format(new_applicant_risk_score[0]*100, ".2f")}%')
 
 if __name__ == "__main__":
     main()
