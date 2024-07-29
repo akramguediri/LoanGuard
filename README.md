@@ -1,5 +1,4 @@
 # LoanGuard
-Credit Risk Analysis Tool
 ```plaintext
             .                ..               _                           
                     .   .                    | |    ___   __ _ _ __       
@@ -23,7 +22,7 @@ Credit Risk Analysis Tool
 
 ## Description
 
-The Credit Risk Analysis Tool is a Python-based application designed to assess the creditworthiness of loan applicants. It integrates data generation, machine learning model training (Logistic Regression), data visualization, and scoring of new applicants based on their provided data.
+LoanGuard is a Python-based application designed to assess the creditworthiness of loan applicants. It integrates data generation, machine learning model training (Logistic Regression), data visualization, and scoring of new applicants based on their provided data.
 
 ## Features
 
